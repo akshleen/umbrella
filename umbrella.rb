@@ -1,3 +1,5 @@
+require "http"
+require "json"
 require 'dotenv/load'
 # /.env
 GMAPS_KEY="AIzaSyDKz4Y3bvrTsWpPRNn9ab55OkmcwZxLOHI"
