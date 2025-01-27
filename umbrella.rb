@@ -41,3 +41,5 @@ umbrella_needed = false
   precip_data << [hour, precip_prob]
   umbrella_needed ||= precip_prob > 10
 end
+puts "\nHours from now vs Precipitation probability\n"
+puts AsciiCharts::Cartesian.new(precip_data, bar: true, hide_zero: true).draw
