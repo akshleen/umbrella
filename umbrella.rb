@@ -43,3 +43,9 @@ umbrella_needed = false
 end
 puts "\nHours from now vs Precipitation probability\n"
 puts AsciiCharts::Cartesian.new(precip_data, bar: true, hide_zero: true).draw
+
+if umbrella_needed
+  puts "\nYou might want to take an umbrella!"
+else
+  puts "\nYou probably won’t need an umbrella today."
+end
