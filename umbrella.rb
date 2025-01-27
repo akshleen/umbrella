@@ -32,3 +32,12 @@ hourly_data = weather_data['hourly']['data']
 
 puts "It is currently #{current_temp}°F."
 puts "Next hour: #{weather_data['minutely'] ? weather_data['minutely']['summary'] : 'No minute data available.'}"
+
+precip_data = []
+umbrella_needed = false
+
+(1..12).each do |hour|
+  precip_prob = hourly_data[hour]['precipProbability'] * 100
+  precip_data << [hour, precip_prob]
+  umbrella_needed ||= precip_prob > 10
+end
